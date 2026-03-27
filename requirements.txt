@@ -8,3 +8,4 @@ pandas-ta
 plotly
 feedparser
 requests
+scipy

@@ -1,11 +1,10 @@
 # AlphaStream — requirements.txt
 # 建議 Python 3.9+
 
-streamlit
-yfinance
-pandas
-pandas-ta
-plotly
-feedparser
-requests
-scipy
+streamlit>=1.35.0
+yfinance>=0.2.40
+pandas>=2.0.0
+pandas-ta>=0.3.14b
+plotly>=5.20.0
+feedparser>=6.0.10
+requests>=2.31.0

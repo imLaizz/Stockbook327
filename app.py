@@ -541,10 +541,10 @@ def render_alphainsight_banner(insight):
 
 CL={
     "bg":"#0a0e1a","paper":"#0d1220","grid":"#1a2d42","text":"#8ba7c4",
-    "cup":"#00e896","cdn":"#ff4466","ma20":"#00d4ff","ma50":"#ffcc00","ma200":"#ff6699","bb":"#3a6080",
-    "macd":"#00d4ff","sig":"#ffcc00","hp":"#00e896","hn":"#ff4466",
+    "cup":"#ff4466","cdn":"#00e896","ma20":"#00d4ff","ma50":"#ffcc00","ma200":"#ff6699","bb":"#3a6080",
+    "macd":"#00d4ff","sig":"#ffcc00","hp":"#ff4466","hn":"#00e896",
     "rsi":"#cc88ff","kl":"#ff9944","dl":"#aa88ff",
-    "vu":"rgba(0,232,150,0.4)","vd":"rgba(255,68,102,0.4)",
+    "vu":"rgba(255,68,102,0.4)","vd":"rgba(0,232,150,0.4)",
 }
 
 def build_chart(df, ticker):
@@ -704,7 +704,7 @@ def kpi_dashboard_html(df, fundamentals):
 
     if cl and pv:
         chg=cl-pv; pct=chg/pv*100; sgn="+" if chg>=0 else ""
-        pc="#00e896" if chg>=0 else "#ff4466"
+        pc="#ff4466" if chg>=0 else "#00e896"
         chg_s=sgn+str(round(chg,2))+" ("+sgn+str(round(pct,2))+"%)"
     else: pc="#e8f4ff"; chg_s="—"
 
@@ -724,7 +724,7 @@ def kpi_dashboard_html(df, fundamentals):
 
     if ma20 and cl and isinstance(cl,float):
         diff=cl-ma20; dp=diff/ma20*100; s2="+" if diff>=0 else ""
-        mc="#00e896" if diff>=0 else "#ff4466"
+        mc="#ff4466" if diff>=0 else "#00e896"
         ml="站上 MA20" if diff>=0 else "跌破 MA20"
         ms=s2+str(round(dp,2))+"% vs MA20="+str(round(ma20,2))
     else: mc,ml,ms="#8ba7c4","N/A","—"
